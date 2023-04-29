@@ -12,7 +12,7 @@ const RegisterScreen = ({ navigation }) => {
     const [hidePass, setHidePass] = useState(true);
 
     const handleregister = () => {
-        axios.post('http://192.168.100.10:4000/api/accounts', {
+        axios.post('http://192.168.100.10:4000/api/', {
             "username": username,
             "email": email,
             "password": password,
@@ -24,7 +24,7 @@ const RegisterScreen = ({ navigation }) => {
                     text2: 'Email Or Password is required!',
                 });
             } else {
-                navigation.navigate('WelcomeScreen');
+                navigation.navigate('Login');
             }
         }).catch((err) => {
             Toast.show({

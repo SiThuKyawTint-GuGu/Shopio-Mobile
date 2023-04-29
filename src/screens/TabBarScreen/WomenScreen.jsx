@@ -1,11 +1,27 @@
-import React from 'react'
-import { Text } from 'react-native'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Text,View,Image ,StyleSheet} from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import Poster from '../../components/Poster'
+import SlideScroll from '../../components/SlideScroll'
+
 
 const WomenScreen = () => {
+    useEffect(() => {
+      
+    }, [])
+    
     return (
-        <Text>
-           WomenScreen
-        </Text>
+        <>
+            <Poster />
+            <SlideScroll />
+            <View>
+                <View>
+                    <Image style={{ width: '100%', height: 150 }}
+                        source={require('../../assets/images/collection.webp')} />
+                </View>
+            </View>
+        </>
     )
 }
 

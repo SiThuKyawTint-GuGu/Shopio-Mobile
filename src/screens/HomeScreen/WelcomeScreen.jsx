@@ -39,7 +39,7 @@ const WelcomeScreen = ({navigation}) => {
     }, [])
     
     const handlenext = () => {
-        axios.post('http://192.168.100.10:4000/api/accounts/info', {
+        axios.post('http://192.168.100.63:4000/api/info', {
             user_id :userID,
             location: name,
             language: language,

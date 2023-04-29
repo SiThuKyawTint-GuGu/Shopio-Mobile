@@ -15,13 +15,13 @@ function RootNavigation() {
     return (
         <NavigationContainer initialRouteName="Login">
             <Stack.Navigator >
-                <Stack.Screen name="MyTabs" component={MyTabs} options={{ headerShown: false }} />
-                <Stack.Screen name="Tabbar" component={Tabbar} options={{ headerShown: false }} />
                 <Stack.Screen name="Login" component={LoginScreen}  options={{ headerShown: false }} />
                 <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="TrueLogin" component={TrueLogin} options={{ headerShown: false }} />
                 <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="MyTabs" component={MyTabs} options={{ headerShown: false }} />
+                <Stack.Screen name="Tabbar" component={Tabbar} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );

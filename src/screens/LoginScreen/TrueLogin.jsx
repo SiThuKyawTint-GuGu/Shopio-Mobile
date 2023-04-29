@@ -6,7 +6,8 @@ import { SocialIcon } from 'react-native-elements'
 import Toast, { BaseToast, ErrorToast } from 'react-native-toast-message';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 const TrueLogin = ({ navigation }) => {
 
@@ -16,12 +17,13 @@ const TrueLogin = ({ navigation }) => {
 
   //Login
   const handlelogin = () => {
-    axios.post('http://192.168.100.10:4000/api/accounts/login', {
+    axios.post('http://192.168.100.63:4000/api/login', {
       "email": email,
       "password": password,
     }).then((res) => {
       AsyncStorage.setItem("user_id", JSON.stringify(res.data.data._id));
       navigation.navigate('WelcomeScreen');
+      // console.log(res.data.data._id)
     }).catch((err) => {
       Toast.show({
         type: 'error',
